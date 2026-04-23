@@ -8,7 +8,7 @@ const workbook = XLSX.readFile("Rdir_2011_20_JHARKHAND.xls");
 const sheet = workbook.Sheets[workbook.SheetNames[0]];
 const data = XLSX.utils.sheet_to_json(sheet);
 
-// ✅ CLEAN DATA (VERY IMPORTANT)
+// CLEAN DATA (VERY IMPORTANT)
 const cleanData = data.map(item => ({
   state: item["STATE NAME"]?.trim(),
   district: item["DISTRICT NAME"]?.trim(),
@@ -16,17 +16,17 @@ const cleanData = data.map(item => ({
   village: item["Area Name"]?.trim()
 }));
 
-// ✅ Home route
+// Home route
 app.get("/", (req, res) => {
-  res.send("Village API is running 🚀");
+  res.send("Village API is running");
 });
 
-// ✅ Villages route (ONLY ONE)
+// Villages route (ONLY ONE)
 app.get("/villages", (req, res) => {
   res.json(cleanData);
 });
 
-// ✅ Search route (FIXED)
+// Search route (FIXED)
 app.get("/search", (req, res) => {
   const district = req.query.district;
 
@@ -37,7 +37,7 @@ app.get("/search", (req, res) => {
   res.json(result);
 });
 
-// ✅ Start server
+// Start server
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });

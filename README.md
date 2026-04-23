@@ -1,7 +1,7 @@
 # 🌍 Village Data Analytics Dashboard
 
 ## 📌 Project Overview
-This project is an end-to-end data analytics solution that analyzes village-level data and presents it using an interactive Power BI dashboard. A Node.js API is used to provide structured data for visualization.
+This project is an end-to-end data analytics solution that analyzes village-level data and presents insights using an interactive Power BI dashboard. A Node.js API is used to process and serve the data in JSON format.
 
 ---
 
@@ -9,7 +9,7 @@ This project is an end-to-end data analytics solution that analyzes village-leve
 - Analyze village-level data
 - Build an interactive dashboard using Power BI
 - Create a backend API using Node.js
-- Understand complete data analysis workflow
+- Understand end-to-end data workflow
 
 ---
 
@@ -24,7 +24,7 @@ This project is an end-to-end data analytics solution that analyzes village-leve
 ## ⚙️ Project Architecture
 1. Excel file as raw data source  
 2. Node.js API to process and serve data  
-3. Power BI dashboard for visualization  
+3. Power BI dashboard connected to API  
 
 ---
 
@@ -48,13 +48,8 @@ http://localhost:3000/search?district=ranchi
 
 ---
 
-## 📊 Dashboard
-The dashboard is created in Power BI and connected to the API for dynamic data visualization.
-
----
-
 ## ▶️ How to Run the Project
 
-1. Install dependencies:
+### Step 1: Clone the repository
 ```bash
-npm install
+git clone https://github.com/JahnaveeSharma/village-data-dashboard-api.git
